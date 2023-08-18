@@ -6,7 +6,9 @@ function volume_sphere() {
 	function submitForm(){
 		event.preventDefault();
 		var rad=document.getElementById("radius").value;
-		document.getElementById("volume").value=(4/3) * Math.PI * Math.pow(rad, 3);
+		var volume1=(4/3) * Math.PI * Math.pow(rad, 3);
+		volume1=volume1.toFixed(4);
+		document.getElementById("volume").value=volume1;
 	}
 	form.addEventListener('submit', submitForm);
 	
